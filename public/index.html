@@ -15,12 +15,23 @@
       <p>
         During data transfer you can pause, Resume and terminate transfer at any point in time.</p>
         <p>
-        This could help in cases when wrong data is transmitted so that we dont have to wait for whole transfer to complete. Alse
-        in cases of network problems as well as the whole file would not be neede to
+        This could help in cases when wrong data is transmitted so that we dont have to wait for whole transfer to complete.
+         Also
+        in cases of network problems as well as the whole file would not be needed to
         be uploaded again.
       </p>
       <p>
         (This could be simulated by stopping the server and restarting in middle of an upload)
+      </p>
+      <p>
+        In summary, resumable.js breaks data into multiple chunks which are seperately uploaded 
+        to server, each chunk is assigned a unique id for identification pourposes
+        then when full file is transferred , the chunks are reassemebeled in the correct order to regerate 
+        the correct file.<br>
+        In pause/resume, the chunks are simply held back from transmitting until the resume button is pressed.
+        <br>
+        If user decides to stop the transmission permanently, the transmission is terminated and all the chunks already
+        transferred are deleted from the server.
       </p>
       <hr/>
 
