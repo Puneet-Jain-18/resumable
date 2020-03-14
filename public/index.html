@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Resumable.js - Multiple simultaneous, stable and resumable uploads via the HTML5 File API</title>
+    <title>Atlan Data Upload</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <div id="frame">
 
-      <h1>Resumable.js</h1>
-      <p>It's a JavaScript library providing multiple simultaneous, stable and resumable uploads via the HTML5 File API.</p>
-
-      <p>The library is designed to introduce fault-tolerance into the upload of large files through HTTP. This is done by splitting each files into small chunks; whenever the upload of a chunk fails, uploading is retried until the procedure completes. This allows uploads to automatically resume uploading after a network connection is lost either locally or to the server. Additionally, it allows for users to pause and resume uploads without loosing state.</p>
-
-      <p>Resumable.js relies on the HTML5 File API and the ability to chunks files into smaller pieces. Currently, this means that support is limited to Firefox 4+ and Chrome 11+.</p>
-
+     <img src="./atlan.png" width="20%" height="5%">
+      <p>
+        You can upload your data here.
+      </p>
+      <p>
+        During data transfer you can pause, Resume and terminate transfer at any point in time.</p>
+        <p>
+        This could help in cases when wrong data is transmitted so that we dont have to wait for whole transfer to complete. Alse
+        in cases of network problems as well as the whole file would not be neede to
+        be uploaded again.
+      </p>
+      <p>
+        (This could be simulated by stopping the server and restarting in middle of an upload)
+      </p>
       <hr/>
 
       <h3>Demo</h3>
@@ -25,8 +32,8 @@
         Your browser, unfortunately, is not supported by Resumable.js. The library requires support for <a href="http://www.w3.org/TR/FileAPI/">the HTML5 File API</a> along with <a href="http://www.w3.org/TR/FileAPI/#normalization-of-params">file slicing</a>.
       </div>
 
-      <div class="resumable-drop">
-        Drop video files here to upload or <a class="resumable-browse"><u>select from your computer</u></a>
+      <div class="resumable-drop" id="uploader">
+        Drop Your files here to upload or <a class="resumable-browse"><u>select from your computer</u></a>
       </div>
       
       <div class="resumable-progress">
@@ -35,9 +42,9 @@
             <td width="100%"><div class="progress-container"><div class="progress-bar"></div></div></td>
             <td class="progress-text" nowrap="nowrap"></td>
             <td class="progress-pause" nowrap="nowrap">
-              <a href="#" onclick="r.upload(); return(false);" class="progress-resume-link"><img src="resume.png" title="Resume upload" /></a>
-              <a href="#" onclick="r.pause(); return(false);" class="progress-pause-link"><img src="pause.png" title="Pause upload" /></a>
-              <a href="#" onclick="r.cancel(); return(false);" class="progress-cancel-link"><img src="cancel.png" title="Cancel upload" /></a>
+              <a href="#" onclick="r.upload(); return(false);" class="progress-resume-link"><button id= "button1"><img src="resume.png" title="Resume upload" /></button></a>
+               <a href="#" onclick="r.pause(); return(false);" class="progress-pause-link"><button id= "button1"><img src="pause.png" title="Pause upload" /></button></a></button>
+              <a href="#" onclick="r.cancel(); return(false);" class="progress-cancel-link"><button id= "button1"><img src="cancel.png" title="Cancel upload" /></button></a>
             </td>
           </tr>
         </table>
@@ -109,6 +116,7 @@
       </script>
 
     </div>
+    <br><br><br><br><br><br><br>
   </body>
 </html>
 

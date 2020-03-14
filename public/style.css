@@ -11,7 +11,7 @@ h5 {font-size:12px; font-weight:bold;}
 p {margin:10px 0;}
 
 
-body {text-align:center; margin:40px;}
+body {height:100%;text-align:center; margin:40px;background: linear-gradient(45deg, #00dbde, #fc00ff);}
 #frame {margin:0 auto; width:800px; text-align:left;}
 
 
@@ -49,3 +49,15 @@ body {text-align:center; margin:40px;}
 .is-error .uploader-item:hover, .is-active.is-error .uploader-item {border-color:#900;}
 .is-error .uploader-item:hover .uploader-item-title, .is-active.is-error .uploader-item .uploader-item-title {background-color:rgba(153,0,0,0.6);}
 .is-error .uploader-item-creating-thumbnail {display:none;}
+#frame{
+    
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 42px 55px 45px 55px;
+
+}
+#uploader{
+
+}
