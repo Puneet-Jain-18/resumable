@@ -4,14 +4,13 @@ var fs = require("fs");
 var resumable = require('./resumable-node.js')(__dirname + "/uploads");
 var app = express();
 var multipart = require('connect-multiparty');
-
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(multipart());
 
 // Handle uploads through Resumable.js
 app.post('/upload', function(req, res){
   resumable.post(req, function(status, filename, original_filename, identifier){
-      console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",status)
+      console.log(status)
     //when all chunks are uploded then status equals to "done" otherwise "partly_done"
     if (status === 'done') {
       //when all chunks uploaded, then createWriteStream to /uploads folder with filename
@@ -48,6 +47,6 @@ app.get('/resumable.js', function (req, res) {
   fs.createReadStream("./resumable.js").pipe(res);
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(31600, function () {
+  console.log('Example app listening on port 31600!');
 });
