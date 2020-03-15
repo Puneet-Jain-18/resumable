@@ -26,3 +26,27 @@ this should start the server on port 31600 of your machine
 ````
 localhost:31600
 ````
+#Docker
+
+The app can easily be packed into a docker container. The docker file supplied contains all commands for sucessful docker image creation
+<br/>
+1. Install docker on your machine using instructions on the website : https://docs.docker.com/install/
+2. to build a docker file, inside the working directory run command 
+````
+docker build -t <any name for docker image> .
+````
+this shall build a docker image using the Dockerfile supplied
+3. To verify image successful creation run command
+
+````
+docker images
+````
+this should display the name of image you created during build
+
+4. Now to build a container and run application from docker run
+````
+docker run -it -p 31600:31600 <name of docker image>
+````
+this should build a container and run the docker image inside it. now try to open localhost:31600. The application should be server here as uswal.
+
+#Thank-You
