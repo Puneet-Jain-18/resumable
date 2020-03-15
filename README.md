@@ -1,1 +1,28 @@
-Resumable file uploads using REST API on express and resumable.js
+# Resumable file uploads using REST API and resumable.js
+The project focuses on the development of an API mechanism through which large files could be uploaded on a node.js server with the user having the option to pause the upload at any point in time. The user then chooses to terminate the upload or resume in different cases.
+# Major-Features
+The project uses resumable.js, a javascript framework that could help in the upload of large files on the server. resumable break file into small chunks of predefined size. Now, these chunks are independently uploaded on the server and on the complete transmission of file they are combined to form the original file on basis of unique ID generated for each chunk.
+
+This could also help in cases when network problems occur in the middle of a transmission, the already assigned chunks would sustain on the server so the user need not upload the whole file again, only the remaining chunks are uploaded now. this would save a whole lot of time and resources where transmission of huge files is taking place.
+
+# Usage
+1. software requirements: 
+````
+node.js
+````
+2. install node.js in your machine from their website https://nodejs.org/en/
+
+3. next you need to install the dependencies of the project. Single command to install dependencies
+````
+npm install
+````
+4. Now run the server of the node application
+
+````
+node app.js
+````
+this should start the server on port 31600 of your machine
+5. go to web browser and go to address
+````
+localhost:31600
+````
