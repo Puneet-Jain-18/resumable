@@ -35,7 +35,7 @@ The app can easily be packed into a docker container. The docker file supplied c
 ````
 docker build -t <any name for docker image> .
 ````
-this shall build a docker image using the Dockerfile supplied
+this shall build a docker image using the Dockerfile supplied.<br>
 3. To verify image successful creation run command
 
 ````
